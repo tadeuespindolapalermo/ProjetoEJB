@@ -1,4 +1,4 @@
-package br.com.projetoejb.stateless.bean;
+package br.com.projetoejb.bean;
 
 import java.io.Serializable;
 
@@ -6,11 +6,11 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
-import br.com.projetoejb.stateless.ejb.ConversorTemperaturaBeanLocal;
+import br.com.projetoejb.ejb.ConversorTemperaturaLocalStatelessBean;
 
-@Named("formConversorTemperatura")
+@Named
 @RequestScoped
-public class FormConversorTemperaturaBean implements Serializable {
+public class FormConversorTemperaturaStatelessBean implements Serializable {
 
 	private static final long serialVersionUID = 8498547499232833205L;
 
@@ -18,7 +18,7 @@ public class FormConversorTemperaturaBean implements Serializable {
 	private Double fahrenheit;
 
 	@EJB
-	private ConversorTemperaturaBeanLocal conversor;
+	private ConversorTemperaturaLocalStatelessBean conversor;
 
 	public String converterCelsiusParaFahrenheit() {
 		fahrenheit = conversor.converterCelsiusParaFahrenheit(celsius);

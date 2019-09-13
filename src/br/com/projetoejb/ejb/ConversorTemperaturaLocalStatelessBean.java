@@ -1,9 +1,9 @@
-package br.com.projetoejb.stateless.ejb;
+package br.com.projetoejb.ejb;
 
 import javax.ejb.Local;
 
 @Local
-public interface ConversorTemperaturaBeanLocal {
+public interface ConversorTemperaturaLocalStatelessBean {
 
 	public double converterCelsiusParaFahrenheit(double celsius);
 	

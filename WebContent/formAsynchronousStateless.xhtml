@@ -8,20 +8,17 @@
 
 <h:head>
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-	<title>Conversor de Temperatura</title>
+	<title>Lista de Itens</title>
 </h:head>
 
 <body>
-	<h1>Conversor de Temperatura</h1>
-
 	<h:form>
-		<h:panelGrid columns="2">
-			Celsius:
-			<h:inputText value="#{formConversorTemperatura.celsius}" />
-			Fahrenheit:
-			<h:inputText value="#{formConversorTemperatura.fahrenheit}" readonly="true" />
-			<h:commandButton value="Converter" action="#{formConversorTemperatura.converterCelsiusParaFahrenheit}" />
-		</h:panelGrid>
+		<h:commandButton value="Executar" action="#{formAsynchronousStatelessBean.executar}" />
+		<h:commandButton value="Executar e Retornar" action="#{formAsynchronousStatelessBean.executarERetornar}" />
+		
+		<h3>#{formAsynchronousStatelessBean.mensagem}</h3>
+		
+		<h:commandButton value="Verificar" action="#{formAsynchronousStatelessBean.verificar}" />
 	</h:form>
 </body>
 </html>

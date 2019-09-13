@@ -1,9 +1,9 @@
-package br.com.projetoejb.stateless.ejb;
+package br.com.projetoejb.ejb;
 
 import javax.ejb.Stateless;
 
 @Stateless
-public class ConversorTemperaturaBean implements ConversorTemperaturaBeanLocal {
+public class ConversorTemperaturaStatelessBean implements ConversorTemperaturaLocalStatelessBean {
 
 	@Override
 	public double converterCelsiusParaFahrenheit(double celsius) {
